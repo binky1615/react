@@ -2,21 +2,27 @@ import BookList from "./components/BookList"
 import Header from "./components/header"
 import "./App.css"
 import Layout from "./components/Layout"
+import { useState } from "react"
 
 function App() {
 
+const [number, setNumber] = useState(0);
+
+const counterHandler = () => {
+  // number+= 1;
+  setNumber(number + 1)
+}
 
 
   return (
     <>
-      <Header link1="" link2="" link3="" title1="ding 1" title2="ding 2" title3="ding 3" />
+      <Header/>
       <h1>skibidi</h1>
       <h2>jason super sigma uwu girl</h2>
-
-
-      <Layout>
         <BookList />
-      </Layout>
+
+        <h2>{number}</h2>
+        <button onClick={counterHandler}>sigma</button>
     </>
   )
 }
