@@ -1,7 +1,9 @@
-const layout = () => {
-    return ( <>
-    <section className="layout"></section>
-    </> );
+const Layout = ({children}) => {
+    return (
+    <section className="container">
+        {children}
+    </section>
+    );
 }
  
-export default layout;
+export default Layout;

@@ -13,14 +13,12 @@ const counterHandler = () => {
   setNumber(number + 1)
 }
 
-
   return (
     <>
       <Header/>
-      <h1>skibidi</h1>
-      <h2>jason super sigma uwu girl</h2>
+        <Layout>
         <BookList />
-
+        </Layout>
         <h2>{number}</h2>
         <button onClick={counterHandler}>sigma</button>
     </>
