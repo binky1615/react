@@ -25,6 +25,15 @@ h2{
   margin: 10px;
 }
 
+button{
+  margin: 10px;
+  padding: 5px;
+  border-radius: 50px;
+  width: 95%;
+  background-color: rgb(148, 60, 13);
+  border: none;
+  color: white;
+}
 
 .object{
   margin: 10px;
