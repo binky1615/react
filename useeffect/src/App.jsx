@@ -1,15 +1,14 @@
 import React from 'react';
-import Clock from './components/Clock';
+import Clock from './components/clock';
+import WelcomeMessage from './components/WelcomeMessage';
+import './App.css'
 
 function App() {
   return (
-    // <div className="App">
-    //   <h1>React Clock</h1>
-    //   <Clock/>
-    // </div>
-    <>
+    <div className='time'>
+    <WelcomeMessage />
     <Clock/>
-    </>
+    </div>
   );
 }
 
