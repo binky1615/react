@@ -1,0 +1,59 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serife;
+}
+
+img{
+  width: 200px;
+  border: solid rgb(255, 87, 255) 4px;
+  border-radius: 5px;
+}
+
+.priceText{
+  color: rgb(255, 87, 255);
+}
+
+.item{
+  width: fit-content;
+  height: 133px;
+  display: flex;
+  gap: 10px;
+}
+
+.itemInfoTop{
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+  border-bottom: solid 2px pink;
+  margin-bottom: 10px;
+  padding-bottom: 2px;
+}
+
+.itemInfo{
+  width: 300px;
+}
+
+.layout{
+  position: relative;
+  width: 85vw;
+  margin: 0 auto;
+  background-color: rgb(255, 240, 252);
+  padding-bottom: 50px;
+  padding: 0 auto;
+}
+
+.itemList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
