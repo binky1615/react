@@ -1,26 +1,27 @@
-import BookList from "./components/BookList"
-import Header from "./components/header"
 import "./App.css"
-import Layout from "./components/Layout"
-import { useState } from "react"
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Home from "./pages/Home"
+import Contact from "./pages/Contact"
+import About from "./pages/About"
+import NoPage from "./pages/NoPage"
+import Navigation from "./pages/Navigation"
 
 function App() {
 
-const [number, setNumber] = useState(0);
-
-const counterHandler = () => {
-  // number+= 1;
-  setNumber(number + 1)
-}
 
   return (
     <>
-      <Header/>
-        <Layout>
-        <BookList />
-        </Layout>
-        <h2>{number}</h2>
-        <button onClick={counterHandler}>sigma</button>
+  <BrowserRouter>
+  <Routes>
+    <Route path='/' element={<Navigation/>}>
+    <Route index element={<Home/>}/>
+    <Route path='/home' element={<Home/>}/>
+    <Route path='/contact' element={<Contact/>}/>
+    <Route path='/about' element={<About/>}/>
+    <Route path='*' element={<NoPage/>}/>
+    </Route>
+  </Routes>
+  </BrowserRouter>
     </>
   )
 }
