@@ -1,10 +1,12 @@
 const Message = ({ name, message }) => {
-    return (
+  return (
       <>
-        <h2>{name}</h2>
-        <p>{message}</p>
+      <div> 
+          <h2>{name}</h2>
+          <p>{message}</p>
+      </div>
       </>
-    );
-  };
-  
-  export default Message;
+  );
+};
+
+export default Message;

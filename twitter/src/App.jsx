@@ -1,21 +1,24 @@
 import { useState } from "react";
-import "./App.css";
-import CreateMessage from "./components/CreateMessage";
-import MessageList from "./components/MessageList";
+import './App.css'
+import CreateMessage from './components/CreateMessage';
+import MessageList from './components/MessageList';
 
 function App() {
-  const [messages, setMessages] = useState([]);
-
-  const addMessage = (name, message) => {
-    setMessages([...messages, { name, message }]);
-  };
+  const [textInput, setTextInput] = useState('');
+  const [message, setMessage] = useState([]);
+  let name = "binky1615";
 
   return (
     <>
-      <CreateMessage addMessage={addMessage} />
-      <MessageList messages={messages} />
+     <CreateMessage
+       textInput={textInput}
+       setTextInput={setTextInput}
+       message={message}
+       setMessage={setMessage}
+     />
+     <MessageList name={name} message={message}/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
