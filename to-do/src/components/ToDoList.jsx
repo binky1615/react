@@ -1,13 +1,13 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-function ToDoList({ todos }) {
+function ToDoList({ todos, removeTodo }) {
   return (
-    <ul>
+    <div className="space-y-3">
       {todos.map((todo, index) => (
-        <ToDoItem key={index} todo={todo} />
+        <ToDoItem key={index} todo={todo} index={index} removeTodo={removeTodo} />
       ))}
-    </ul>
+    </div>
   );
 }
 
