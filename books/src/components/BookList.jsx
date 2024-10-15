@@ -1,34 +1,37 @@
-import Book from "./Book";
 import { useState } from "react";
+import Book from "./Book";
+import data from './data';
 
 const BookList = () => {
+    const [books, setBooks] = useState(data);
+    const [searchInput, setSearchInput] = useState('');
 
-    const [books, setBooks] = useState([
-        {
-            image: "afbeelding 1",
-            title: "boek 1",
-            author: "kiwi"
-        },
-        {
-            image: "afbeelding 2",
-            title: "boek 2",
-            author: "binky"
-        }
-    ])
+    const handleChange = (e) => {
+        setSearchInput(e.target.value);
+    };
+
+    const filteredBooks = books.filter((book) =>
+        book.title.toLowerCase().includes(searchInput.toLowerCase())
+    );
 
     return (
         <>
-            {
-                books.map((book) => (
-                    <Book
-                        title={book.title}
-                        image={book.image}
-                        author={book.author}
-                    />
-                ))
-            }
+            <div className="search">
+                <input
+                    type="text"
+                    placeholder="Zoek een titel op"
+                    onChange={handleChange}
+                    value={searchInput}
+                    name="search"
+                />
+            </div>
+            <div className="books">
+                {filteredBooks.map((book) => (
+                    <Book key={book.title} title={book.title} image={book.image} author={book.author} />
+                ))}
+            </div>
         </>
     );
-}
+};
 
 export default BookList;
