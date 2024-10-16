@@ -33,6 +33,5 @@ const BookList = () => {
         </>
     );
 };
-//sigma
 
 export default BookList;

@@ -1,6 +1,4 @@
-const data = () => {
-
-    const [books, setBooks] = useState([
+    const books = [
         {
             image: "afbeelding 1",
             title: "boek 1",
@@ -11,14 +9,6 @@ const data = () => {
             title: "boek 2",
             author: "binky"
         }
-    ])
+    ]
 
-    
-    return ( 
-        <>
-        
-        </>
-     );
-}
- 
-export default data;
+    export default books;
