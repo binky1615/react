@@ -8,7 +8,7 @@ const MovieList = ({ movies, onDelete }) => {
   return (
     <ul>
       {movies.map((movie, index) => (
-        <MovieItem movie={movie} onDelete={onDelete} />
+        <MovieItem movie={movie} onDelete={onDelete} key={index}/>
       ))}
     </ul>
   );

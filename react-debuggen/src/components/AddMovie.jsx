@@ -1,3 +1,4 @@
+import { useState } from "react";
 
 const AddMovie = ({ onAdd })  => {
   const [movie, setMovie] = useState('');
@@ -9,10 +10,10 @@ const AddMovie = ({ onAdd })  => {
       return;
     }
     onAdd(movie); 
- 
+   setMovie(''); 
   };
 
-  setMovie(''); 
+
 
   return (
     <form onSubmit={handleSubmit}>
